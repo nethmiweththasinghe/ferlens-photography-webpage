@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 export function useTheme() {
   const [theme, setTheme] = useState(
-    () => localStorage.getItem('ferlens-theme') || 'dark'
+    () => localStorage.getItem('ferlens-theme') || 'light'
   );
 
   useEffect(() => {

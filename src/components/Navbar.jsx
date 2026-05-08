@@ -30,7 +30,7 @@ export default function Navbar({ theme, onToggle }) {
           href="#home"
           style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.5rem', fontWeight: 300, color: 'var(--text)', letterSpacing: '0.12em', textDecoration: 'none' }}
         >
-          FERLENS
+          FERNLENS
         </a>
 
         {/* Desktop links — centered */}
@@ -59,7 +59,7 @@ export default function Navbar({ theme, onToggle }) {
             onMouseEnter={e => (e.currentTarget.style.color = 'var(--accent)')}
             onMouseLeave={e => (e.currentTarget.style.color = 'var(--muted)')}
           >
-            {theme === 'dark' ? '○' : '●'}
+            {theme === 'dark' ? '☀' : '☽'}
           </button>
 
           {/* Hamburger */}
