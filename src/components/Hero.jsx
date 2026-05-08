@@ -50,7 +50,7 @@ export default function Hero() {
             letterSpacing: '0.08em',
           }}
         >
-          FERLENS
+          FERNLENS
         </h1>
         <div className="gold-line mb-6" style={{ margin: '0 auto 1.5rem' }} />
         <p

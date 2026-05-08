@@ -40,7 +40,7 @@ export default function About() {
             </h2>
             <div style={{ width:'40px', height:'1px', background:'var(--accent)', marginBottom:'2rem' }} />
             <p style={{ color:'var(--text2)', fontFamily:'Jost', fontWeight:300, lineHeight:1.9, fontSize:'0.95rem', marginBottom:'1.5rem' }}>
-              Ferlens Photography specialises in creating timeless images that tell your unique story. From the intimate moments of a newborn session to the grandeur of a wedding day, every shoot is approached with the same passion and attention to detail.
+              Fernlens Photography specialises in creating timeless images that tell your unique story. From the intimate moments of a newborn session to the grandeur of a wedding day, every shoot is approached with the same passion and attention to detail.
             </p>
             <p style={{ color:'var(--muted)', fontFamily:'Jost', fontWeight:300, lineHeight:1.9, fontSize:'0.9rem', marginBottom:'2.5rem' }}>
               Based in New Zealand, available worldwide for destination shoots and events.

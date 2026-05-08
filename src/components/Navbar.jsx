@@ -81,7 +81,7 @@ export default function Navbar({ theme, onToggle }) {
             style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: '1.3rem', color: 'var(--accent)', letterSpacing: '0.12em', textDecoration: 'none' }}
             onClick={() => setMenuOpen(false)}
           >
-            FERLENS
+            FERNLENS
           </a>
           {links.map(l => (
             <a
