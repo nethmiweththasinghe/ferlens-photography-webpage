@@ -71,12 +71,12 @@ export const photos = [
 ];
 
 export const heroImages = [
-  { src: '/photos/slide1.jpeg', alt: 'Slide 1' },
-  { src: '/photos/slide2.jpeg', alt: 'Slide 2' },
-  { src: '/photos/slide3.jpeg', alt: 'Slide 3' },
-  { src: '/photos/slide4.jpeg', alt: 'Slide 4' },
-  { src: '/photos/slide5.jpeg', alt: 'Slide 5' },
-  { src: '/photos/slide6.jpeg', alt: 'Slide 6' },
-  { src: '/photos/slide7.jpeg', alt: 'Slide 7' },
-  { src: '/photos/slide8.jpeg', alt: 'Slide 8' },
+  { src: '/photos/slide1.jpeg', alt: 'Slide 1', category: 'Event Photography' },
+  { src: '/photos/slide2.jpeg', alt: 'Slide 2', category: 'Graduation Photography' },
+  { src: '/photos/slide4.jpeg', alt: 'Slide 4', category: 'Real State' },
+  { src: '/photos/slide7.jpeg', alt: 'Slide 7', category: 'Birthday Photography' },
+  { src: '/photos/slide5.jpeg', alt: 'Slide 5', category: 'Graduation Photography' },
+  { src: '/photos/slide8.jpeg', alt: 'Slide 8', category: 'Wedding Photography' },
+  { src: '/photos/slide9.jpeg', alt: 'Slide 9', category: 'Product Photography' },
+  { src: '/photos/slide10.jpeg', alt: 'Slide 10', category: 'Birthday Photography' },
 ];

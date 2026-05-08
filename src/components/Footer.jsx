@@ -7,7 +7,7 @@ export default function Footer() {
       <p style={{ fontFamily:'Jost', fontSize:'0.7rem', letterSpacing:'0.12em', color:'var(--muted)', textTransform:'uppercase' }}>
         Photography & Visual Storytelling · New Zealand
       </p>
-      <p style={{ fontFamily:'Jost', fontSize:'0.65rem', color:'var(--subtle)', marginTop:'1.5rem', letterSpacing:'0.08em' }}>
+      <p style={{ fontFamily:'Jost', fontSize:'0.65rem', color:'var(--muted)', marginTop:'1.5rem', letterSpacing:'0.08em' }}>
         © {new Date().getFullYear()} Fernlens Photography. All rights reserved.
       </p>
     </footer>

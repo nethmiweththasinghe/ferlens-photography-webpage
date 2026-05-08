@@ -20,9 +20,7 @@ export default function About() {
           {/* Left — image placeholder */}
           <div className="relative">
             <div style={{ width:'100%', aspectRatio:'3/4', background:'var(--surface)', border:'1px solid var(--subtle)', display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column', gap:'0.75rem' }}>
-              {/* Replace this div with: <img src="/photos/photographer.jpg" className="w-full h-full object-cover" /> */}
-              <p style={{ color:'var(--subtle)', fontFamily:'Jost', fontSize:'0.7rem', letterSpacing:'0.15em', textTransform:'uppercase' }}>Your Photo Here</p>
-              <p style={{ color:'var(--subtle)', fontFamily:'Jost', fontSize:'0.65rem', letterSpacing:'0.1em' }}>/public/photos/photographer.jpg</p>
+              <img src="../../public/photos/slide10.jpeg" className="w-full h-full object-cover" />
             </div>
             {/* Gold accent line */}
             <div style={{ position:'absolute', bottom:'-1rem', left:'-1rem', width:'60%', height:'1px', background:'var(--accent)' }} />
@@ -43,12 +41,12 @@ export default function About() {
               Fernlens Photography specialises in creating timeless images that tell your unique story. From the intimate moments of a newborn session to the grandeur of a wedding day, every shoot is approached with the same passion and attention to detail.
             </p>
             <p style={{ color:'var(--muted)', fontFamily:'Jost', fontWeight:300, lineHeight:1.9, fontSize:'0.9rem', marginBottom:'2.5rem' }}>
-              Based in New Zealand, available worldwide for destination shoots and events.
+              Based in New Zealand, available  for any type of shoots and events.
             </p>
 
             {/* Services list */}
             <div className="grid grid-cols-2 gap-3">
-              {['Maternity', 'Newborn', 'Birthday', 'Family Events', 'Graduation', 'University Events', 'Music Events', 'Product'].map(s => (
+              {['Maternity', 'Newborn', 'Birthday', 'Family Events', 'Graduation', 'University Events', 'Music Events', 'Product', 'Wedding', 'Portrait'].map(s => (
                 <div key={s} className="flex items-center gap-2">
                   <span style={{ width:'4px', height:'4px', borderRadius:'50%', background:'var(--accent)', flexShrink:0 }} />
                   <span style={{ fontFamily:'Jost', fontSize:'0.8rem', letterSpacing:'0.08em', color:'var(--text2)' }}>{s}</span>

@@ -36,14 +36,16 @@ export default function Navbar({ theme, onToggle }) {
             src={logo}
             alt="Fernlens Photography"
             style={{
-              height: "120px",
+              height: "100px",
               width: "auto",
               objectFit: "contain",
               filter:
-                theme === "dark"
-                  ? "invert(1) drop-shadow(0px 1px 4px rgba(0,0,0,0.5))"
-                  : "drop-shadow(0px 1px 4px rgba(0,0,0,0.15))",
-              mixBlendMode: theme === "dark" ? "screen" : "multiply",
+                scrolled && theme === "light"
+                  ? "drop-shadow(0px 1px 4px rgba(0,0,0,0.15))" // dark logo on light nav
+                  : "invert(1) drop-shadow(0px 1px 8px rgba(0,0,0,0.6))", // white logo on dark/hero
+              mixBlendMode:
+                scrolled && theme === "light" ? "multiply" : "screen",
+              transition: "filter 0.3s ease",
             }}
           />
         </a>
@@ -55,7 +57,7 @@ export default function Navbar({ theme, onToggle }) {
               <a
                 href={l.href}
                 style={{
-                  color: "var(--muted)",
+                  color: scrolled ? "var(--muted)" : "rgba(255,255,255,0.75)",
                   textDecoration: "none",
                   fontFamily: "Jost, sans-serif",
                   fontSize: "0.8rem",
@@ -65,7 +67,11 @@ export default function Navbar({ theme, onToggle }) {
                   transition: "color 0.2s",
                 }}
                 onMouseEnter={(e) => (e.target.style.color = "var(--accent)")}
-                onMouseLeave={(e) => (e.target.style.color = "var(--muted)")}
+                onMouseLeave={(e) =>
+                  (e.target.style.color = scrolled
+                    ? "var(--muted)"
+                    : "rgba(255,255,255,0.75)")
+                }
               >
                 {l.label}
               </a>
@@ -83,7 +89,7 @@ export default function Navbar({ theme, onToggle }) {
               background: "none",
               border: "none",
               cursor: "pointer",
-              color: "var(--muted)",
+              color: "var(--muted): 'rgba(255,255,255,0.75)'",
               fontSize: "1rem",
               transition: "color 0.2s",
             }}
