@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { heroImages } from '../data/photos';
 
-export default function Hero() {
+export default function Home() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -21,8 +21,8 @@ export default function Hero() {
           style={{ opacity: i === current ? 1 : 0 }}
         >
           <img
-            src={img}
-            alt={`Hero ${i + 1}`}
+            src={img.src}
+            alt={img.alt}
             className="w-full h-full object-cover"
           />
         </div>

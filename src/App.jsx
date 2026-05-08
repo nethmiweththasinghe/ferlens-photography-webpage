@@ -1,5 +1,5 @@
 import Navbar    from './components/Navbar';
-import Hero      from './components/Hero';
+import Home      from './components/Home';
 import Portfolio from './components/Portfolio';
 import About     from './components/About';
 import Contact   from './components/Contact';
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <Navbar theme={theme} onToggle={toggle} />
-      <Hero />
+      <Home />
       <Portfolio />
       <About />
       <Contact />

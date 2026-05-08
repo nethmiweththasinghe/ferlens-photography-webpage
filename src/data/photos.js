@@ -71,8 +71,12 @@ export const photos = [
 ];
 
 export const heroImages = [
-  'https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=90',
-  'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1600&q=90',
-  'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1600&q=90',
-  'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=90',
+  { src: '/photos/slide1.jpeg', alt: 'Slide 1' },
+  { src: '/photos/slide2.jpeg', alt: 'Slide 2' },
+  { src: '/photos/slide3.jpeg', alt: 'Slide 3' },
+  { src: '/photos/slide4.jpeg', alt: 'Slide 4' },
+  { src: '/photos/slide5.jpeg', alt: 'Slide 5' },
+  { src: '/photos/slide6.jpeg', alt: 'Slide 6' },
+  { src: '/photos/slide7.jpeg', alt: 'Slide 7' },
+  { src: '/photos/slide8.jpeg', alt: 'Slide 8' },
 ];
