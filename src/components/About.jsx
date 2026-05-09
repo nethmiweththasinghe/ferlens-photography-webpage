@@ -37,7 +37,7 @@ export default function About() {
               Capturing moments<br />
               <em style={{ fontStyle:'italic' }}>that last forever</em>
             </h2>
-            <div style={{ width:'40px', height:'1px', background:'var(--accent)', marginBottom:'2rem' }} />
+            <div style={{ width:'40px', height:'1px', background:'var(--accent)', marginBottom:'1rem' }} />
             <p style={{ color:'var(--text2)', fontFamily:'Jost', fontWeight:300, lineHeight:1.9, fontSize:'0.95rem', marginBottom:'1.5rem' }}>
               Fernlens Photography specialises in creating timeless images that tell your unique story. From the intimate moments of a newborn session to the grandeur of a wedding day, every shoot is approached with the same passion and attention to detail.
             </p>
@@ -47,7 +47,7 @@ export default function About() {
 
             {/* Services list */}
             <div className="grid grid-cols-2 gap-3">
-              {['Maternity', 'Newborn', 'Birthday', 'Family Events', 'Graduation', 'University Events', 'Music Events', 'Product', 'Wedding', 'Portrait'].map(s => (
+              {['Maternity', 'Gender Reveal', 'Baby Shower', 'Newborn', 'Birthday', 'Family Events', 'Graduation', 'University Events', 'Music Events', 'Product', 'Wedding', 'Real State'].map(s => (
                 <div key={s} className="flex items-center gap-2">
                   <span style={{ width:'4px', height:'4px', borderRadius:'50%', background:'var(--accent)', flexShrink:0 }} />
                   <span style={{ fontFamily:'Jost', fontSize:'0.8rem', letterSpacing:'0.08em', color:'var(--text2)' }}>{s}</span>

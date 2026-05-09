@@ -12,6 +12,7 @@ export const categories = [
   'University Events',
   'Music Events',
   'Product',
+  'Real State',
   'Wedding',
   'Newborn',
   'Portrait',
@@ -27,10 +28,10 @@ export const photos = [
   
   // Gender Reveal
   p('Gender Reveal', '/photos/genderReveal/G1.jpg', 'Gender Reveal'),
-  p('Gender Reveal', '/photos/genderReveal/G2.jpg', 'Gender Reveal'),
   p('Gender Reveal', '/photos/genderReveal/G3.jpg', 'Gender Reveal'),
-  p('Gender Reveal', '/photos/genderReveal/G4.jpg', 'Gender Reveal'),
+  p('Gender Reveal', '/photos/genderReveal/G2.jpg', 'Gender Reveal'),
   p('Gender Reveal', '/photos/genderReveal/G5.jpg', 'Gender Reveal'),
+  p('Gender Reveal', '/photos/genderReveal/G4.jpg', 'Gender Reveal'),
   
   // Baby Shower
   p('Baby Shower', '/photos/babyShower/BS2.jpg', 'Baby Shower'),
@@ -80,11 +81,15 @@ export const photos = [
   // p('Product', 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80', 'Product shoot'),
   // p('Product', 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&q=80', 'Commercial product'),
   
+  // REAL STATE
+  // p('Real State', '/photos/realState/RS1.jpg', 'Real State'),
+  // p('Real State', '/photos/realState/RS2.jpg', 'Real State'),
+  
   // WEDDING
   // p('Wedding', 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80', 'Wedding ceremony'),
   // p('Wedding', 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80', 'Wedding couple'),
   // p('Wedding', 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80', 'Wedding reception'),
-  
+
   // NEWBORN
   // p('Newborn', 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&q=80', 'Newborn sleeping'),
   // p('Newborn', 'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800&q=80', 'Newborn with parents'),

@@ -3,13 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/photos/logo.png" />
     <title>Fernlens Photography</title>
-    <meta name="description" content="Fernlens Photography — Wedding, Portrait & Commercial Photography" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Fernlens Photography — Wedding, Portrait & Commercial Photography"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=DM+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!-- Koalendar Popup Widget Start -->
+    <script>
+      window.Koalendar =
+        window.Koalendar ||
+        function () {
+          (Koalendar.props = Koalendar.props || []).push(arguments);
+        };
+    </script>
+    <script async src="https://koalendar.com/assets/widget.js"></script>
+    <script>
+      Koalendar("widget", {
+        url: "https://koalendar.com/e/book-a-session-24",
+        text: "BOOK A SESSION",
+        shape: "rounded-full",
+        backgroundColor: "#ffffff",
+        textColor: "#9a6f38",
+        border: "1px solid #9a6f38",
+        position: "bottom-right",
+        icon: "calendar",
+      });
+    </script>
+    <!-- Koalendar Popup Widget End -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -103,7 +103,6 @@ export default function Contact() {
         </p>
 
         {/* Contact links */}
-        {/* Social & contact links */}
         <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
           <a
             href="mailto:fernlensphotography@gmail.com"
@@ -159,8 +158,8 @@ export default function Contact() {
           ))}
         </div>
 
-        <a
-          href="mailto:fernlensphotography@gmail.com"
+        {/* <a
+          href="https://koalendar.com/e/book-a-session-24"
           style={{
             display: "inline-block",
             border: "1px solid var(--accent)",
@@ -183,7 +182,7 @@ export default function Contact() {
           }}
         >
           Book a Session
-        </a>
+        </a> */}
       </div>
     </section>
   );
