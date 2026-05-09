@@ -31,7 +31,7 @@ export default function Navbar({ theme, onToggle }) {
 
   const logoHeight =
     width < 640
-      ? "35px" // mobile
+      ? "30px" // mobile
       : width < 1024
         ? "50px" // tablet
         : "60px"; // desktop
@@ -107,14 +107,18 @@ export default function Navbar({ theme, onToggle }) {
               background: "none",
               border: "none",
               cursor: "pointer",
-              color: "var(--muted): 'rgba(255,255,255,0.75)'",
+              color: scrolled ? "var(--muted)" : "rgba(255,255,255,0.85)",
               fontSize: "1rem",
               transition: "color 0.2s",
             }}
             onMouseEnter={(e) =>
               (e.currentTarget.style.color = "var(--accent)")
             }
-            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted)")}
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = scrolled
+                ? "var(--muted)"
+                : "rgba(255,255,255,0.85)")
+            }
           >
             {theme === "dark" ? "☀" : "☽"}
           </button>
