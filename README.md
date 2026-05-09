@@ -22,12 +22,12 @@ A professional photography portfolio website for **Fern Lens Photography**, show
 
 ## ✨ Features
 
-- **Full-screen hero slider** — Rotating photography categories with cinematic overlays (Event Photography, Graduation Photography, and more)
-- **Portfolio gallery** — Curated collections organised by shoot type
-- **Book a Session** — Persistent CTA button for easy client booking
-- **Dark mode toggle** — Moon icon for comfortable browsing in low light
-- **Fully responsive** — Optimised for desktop, tablet, and mobile
-- **Minimal navigation** — Home · Portfolio · About · Contact
+- **Full-screen hero slider** - Rotating photography categories with cinematic overlays (Event Photography, Graduation Photography, and more)
+- **Portfolio gallery** - Curated collections organised by shoot type
+- **Book a Session** - Persistent CTA button for easy client booking
+- **Dark mode toggle** - Moon icon for comfortable browsing in low light
+- **Fully responsive** - Optimised for desktop, tablet, and mobile
+- **Minimal navigation** - Home · Portfolio · About · Contact
 
 ---
 
@@ -50,23 +50,6 @@ A professional photography portfolio website for **Fern Lens Photography**, show
 | Fonts | Serif display + sans-serif body |
 | Hosting | Custom domain via fernlensphotography.nz |
 | Responsive | Mobile-first CSS |
-
----
-
-## 🚀 Getting Started
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/fern-lens-photography.git
-
-# Navigate into the project
-cd fern-lens-photography
-
-# Open in your browser
-open index.html
-```
-
-> No build tools or dependencies required — pure HTML/CSS/JS.
 
 ---
 
