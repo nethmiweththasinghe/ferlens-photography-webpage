@@ -8,9 +8,20 @@ const links = [
   { href: "#contact", label: "Contact" },
 ];
 
+function useWindowWidth() {
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const onResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+  return width;
+}
+
 export default function Navbar({ theme, onToggle }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const width = useWindowWidth();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -18,10 +29,17 @@ export default function Navbar({ theme, onToggle }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const logoHeight =
+    width < 640
+      ? "35px" // mobile
+      : width < 1024
+        ? "50px" // tablet
+        : "60px"; // desktop
+
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-16 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-16 py-5 transition-all duration-500 ${
           scrolled ? "nav-blur border-b" : ""
         }`}
         style={{ borderColor: "var(--subtle)" }}
@@ -36,16 +54,16 @@ export default function Navbar({ theme, onToggle }) {
             src={logo}
             alt="Fernlens Photography"
             style={{
-              height: "100px",
+              height: logoHeight,
               width: "auto",
               objectFit: "contain",
               filter:
                 scrolled && theme === "light"
-                  ? "drop-shadow(0px 1px 4px rgba(0,0,0,0.15))" // dark logo on light nav
-                  : "invert(1) drop-shadow(0px 1px 8px rgba(0,0,0,0.6))", // white logo on dark/hero
+                  ? "drop-shadow(0px 1px 4px rgba(0,0,0,0.15))"
+                  : "invert(1) drop-shadow(0px 1px 8px rgba(0,0,0,0.6))",
               mixBlendMode:
                 scrolled && theme === "light" ? "multiply" : "screen",
-              transition: "filter 0.3s ease",
+              transition: "filter 0.3s ease, height 0.3s ease",
             }}
           />
         </a>
@@ -109,7 +127,7 @@ export default function Navbar({ theme, onToggle }) {
               background: "none",
               border: "none",
               cursor: "pointer",
-              color: "var(--text)",
+              color: "var(--accent)",
               fontSize: "1.2rem",
             }}
           >
@@ -121,19 +139,35 @@ export default function Navbar({ theme, onToggle }) {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="mobile-menu md:hidden">
-          <a
-            href="#home"
-            style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: "1.3rem",
-              color: "var(--accent)",
-              letterSpacing: "0.12em",
-              textDecoration: "none",
-            }}
+          {/* Close button — top right */}
+          <button
             onClick={() => setMenuOpen(false)}
+            style={{
+              position: "absolute",
+              top: "1.5rem",
+              right: "2rem",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              color: "var(--accent)",
+              fontSize: "1rem",
+              lineHeight: 1,
+            }}
           >
-            FERNLENS
-          </a>
+            ✕
+          </button>
+
+          <img
+            src={logo}
+            alt="Fernlens"
+            style={{
+              height: "100px",
+              width: "auto",
+              filter: theme === "dark" ? "invert(1)" : "none",
+              mixBlendMode: theme === "dark" ? "screen" : "multiply",
+            }}
+          />
+
           {links.map((l) => (
             <a
               key={l.href}
