@@ -10,13 +10,13 @@ A professional photography portfolio website for **Fern Lens Photography**, show
 
 ## 🖥️ Desktop Preview
 
-![Fern Lens Photography – Desktop](./public/desktop-preview.png)
+<img src="public/desktop-preview.png" width="800" alt="Fern Lens Photography – Desktop" />
 
 ---
 
 ## 📱 Mobile Preview
 
-![Fern Lens Photography – Mobile](./public/mobile-preview.jpeg)
+<img src="public/mobile-preview.jpeg" width="300" alt="Fern Lens Photography – Mobile" />
 
 ---
 
