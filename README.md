@@ -1,16 +1,94 @@
-# React + Vite
+# 📸 Fern Lens Photography
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> *Capturing moments that last forever.*
 
-Currently, two official plugins are available:
+A professional photography portfolio website for **Fern Lens Photography**, showcasing event, graduation, and lifestyle photography. Built for elegance, speed, and a seamless booking experience across all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌐 **Live Site:** [fernlensphotography.nz](https://fernlensphotography.nz)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🖥️ Desktop Preview
 
-## Expanding the ESLint configuration
+![Fern Lens Photography – Desktop](./desktop-preview.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📱 Mobile Preview
+
+![Fern Lens Photography – Mobile](./mobile-preview.jpeg)
+
+---
+
+## ✨ Features
+
+- **Full-screen hero slider** — Rotating photography categories with cinematic overlays (Event Photography, Graduation Photography, and more)
+- **Portfolio gallery** — Curated collections organised by shoot type
+- **Book a Session** — Persistent CTA button for easy client booking
+- **Dark mode toggle** — Moon icon for comfortable browsing in low light
+- **Fully responsive** — Optimised for desktop, tablet, and mobile
+- **Minimal navigation** — Home · Portfolio · About · Contact
+
+---
+
+## 🗂️ Pages
+
+| Page | Description |
+|------|-------------|
+| Home | Hero slider with category highlights and booking CTA |
+| Portfolio | Gallery of event, graduation, and lifestyle shoots |
+| About | Photographer bio and story |
+| Contact | Enquiry form and social links |
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | HTML, CSS, JavaScript |
+| Fonts | Serif display + sans-serif body |
+| Hosting | Custom domain via fernlensphotography.nz |
+| Responsive | Mobile-first CSS |
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/fern-lens-photography.git
+
+# Navigate into the project
+cd fern-lens-photography
+
+# Open in your browser
+open index.html
+```
+
+> No build tools or dependencies required — pure HTML/CSS/JS.
+
+---
+
+## 📁 Project Structure
+
+```
+fern-lens-photography/
+├── index.html          # Main entry point
+├── css/
+│   └── styles.css      # Global styles & responsive layout
+├── js/
+│   └── main.js         # Slider, dark mode, interactions
+├── images/             # Photography assets
+└── README.md
+```
+
+---
+
+## 📬 Contact
+
+For bookings and enquiries, visit [fernlensphotography.nz](https://fernlensphotography.nz) and click **Book a Session**.
+
+---
+
+*© Fern Lens Photography. All rights reserved.*
