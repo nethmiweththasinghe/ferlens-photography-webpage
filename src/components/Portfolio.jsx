@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { photos, categories } from '../data/photos';
 
+const PAGE_SIZE = 7;
+
 function Lightbox({ photo, onClose, onPrev, onNext }) {
   useEffect(() => {
     const onKey = (e) => {
@@ -25,8 +27,9 @@ function Lightbox({ photo, onClose, onPrev, onNext }) {
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [visibleCount, setVisibleCount]     = useState(PAGE_SIZE);
   const [lightboxIndex, setLightboxIndex]   = useState(null);
-  const ref     = useRef(null);
+  const ref       = useRef(null);
   const filterRef = useRef(null);
 
   useEffect(() => {
@@ -38,14 +41,23 @@ export default function Portfolio() {
     return () => observer.disconnect();
   }, []);
 
+  // Reset visible count when category changes
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [activeCategory]);
+
   const filtered = activeCategory === 'All'
     ? photos
     : photos.filter(p => p.category === activeCategory);
 
-  const openLightbox  = (photo) => setLightboxIndex(filtered.findIndex(p => p.id === photo.id));
+  const visible    = filtered.slice(0, visibleCount);
+  const hasMore    = visibleCount < filtered.length;
+  const remaining  = filtered.length - visibleCount;
+
+  const openLightbox  = (photo) => setLightboxIndex(visible.findIndex(p => p.id === photo.id));
   const closeLightbox = () => setLightboxIndex(null);
-  const prevPhoto     = () => setLightboxIndex(i => (i - 1 + filtered.length) % filtered.length);
-  const nextPhoto     = () => setLightboxIndex(i => (i + 1) % filtered.length);
+  const prevPhoto     = () => setLightboxIndex(i => (i - 1 + visible.length) % visible.length);
+  const nextPhoto     = () => setLightboxIndex(i => (i + 1) % visible.length);
 
   return (
     <section id="portfolio" style={{ background: 'var(--bg)', padding: '6rem 0' }}>
@@ -68,7 +80,6 @@ export default function Portfolio() {
           className="flex gap-3 mb-12 pb-3 overflow-x-auto"
           style={{ scrollbarWidth:'none', msOverflowStyle:'none' }}
         >
-          <style>{`.filter-bar::-webkit-scrollbar { display: none; }`}</style>
           {categories.map(cat => (
             <button
               key={cat}
@@ -109,13 +120,13 @@ export default function Portfolio() {
 
         {/* Count */}
         <p style={{ fontFamily:'Jost', fontSize:'0.7rem', letterSpacing:'0.12em', color:'var(--muted)', marginBottom:'2rem', textTransform:'uppercase' }}>
-          {filtered.length} {filtered.length === 1 ? 'image' : 'images'}
+          Showing {visible.length} of {filtered.length} {filtered.length === 1 ? 'image' : 'images'}
           {activeCategory !== 'All' ? ` · ${activeCategory}` : ''}
         </p>
 
         {/* Masonry grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
-          {filtered.map((photo) => (
+          {visible.map((photo) => (
             <div
               key={photo.id}
               className="photo-item break-inside-avoid mb-4 cursor-pointer"
@@ -141,6 +152,7 @@ export default function Portfolio() {
           ))}
         </div>
 
+        {/* Empty state */}
         {filtered.length === 0 && (
           <div className="text-center py-24">
             <p style={{ fontFamily:'"Cormorant Garamond", serif', fontSize:'1.5rem', color:'var(--muted)', fontStyle:'italic' }}>
@@ -148,11 +160,56 @@ export default function Portfolio() {
             </p>
           </div>
         )}
+
+        {/* Show More button */}
+        {hasMore && (
+          <div className="text-center mt-16">
+            <p style={{ fontFamily:'Jost', fontSize:'0.7rem', color:'var(--muted)', letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:'1.5rem' }}>
+              {remaining} more {remaining === 1 ? 'image' : 'images'} in {activeCategory === 'All' ? 'this collection' : activeCategory}
+            </p>
+            <button
+              onClick={() => setVisibleCount(c => c + PAGE_SIZE)}
+              style={{
+                background: 'transparent',
+                border: '1px solid var(--accent)',
+                color: 'var(--accent)',
+                fontFamily: 'Jost',
+                fontSize: '0.75rem',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                padding: '14px 40px',
+                cursor: 'pointer',
+                transition: 'all 0.3s',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.background = 'var(--accent)';
+                e.currentTarget.style.color = 'var(--bg)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = 'var(--accent)';
+              }}
+            >
+              Load More
+            </button>
+          </div>
+        )}
+
+        {/* All loaded message */}
+        {!hasMore && filtered.length > PAGE_SIZE && (
+          <div className="text-center mt-16">
+            <div className="gold-line" style={{ margin: '0 auto 1rem' }} />
+            <p style={{ fontFamily:'"Cormorant Garamond", serif', fontSize:'1rem', color:'var(--muted)', fontStyle:'italic' }}>
+              All {filtered.length} images loaded
+            </p>
+          </div>
+        )}
+
       </div>
 
       {lightboxIndex !== null && (
         <Lightbox
-          photo={filtered[lightboxIndex]}
+          photo={visible[lightboxIndex]}
           onClose={closeLightbox}
           onPrev={prevPhoto}
           onNext={nextPhoto}

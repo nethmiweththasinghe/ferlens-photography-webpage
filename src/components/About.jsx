@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import aboutPhoto from "/photos/family/F3.jpg";
 
 export default function About() {
   const ref = useRef(null);
@@ -20,7 +21,7 @@ export default function About() {
           {/* Left — image placeholder */}
           <div className="relative">
             <div style={{ width:'100%', aspectRatio:'3/4', background:'var(--surface)', border:'1px solid var(--subtle)', display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column', gap:'0.75rem' }}>
-              <img src="../../public/photos/slide10.jpeg" className="w-full h-full object-cover" />
+              <img src={aboutPhoto} alt="About" className="w-full h-full object-cover" />
             </div>
             {/* Gold accent line */}
             <div style={{ position:'absolute', bottom:'-1rem', left:'-1rem', width:'60%', height:'1px', background:'var(--accent)' }} />
