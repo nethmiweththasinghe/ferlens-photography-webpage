@@ -12,7 +12,7 @@ export const categories = [
   'University Events',
   'Music Events',
   'Product',
-  'Real State',
+  'Real Estate',
   'Wedding',
   'Newborn',
   'Portrait',
@@ -81,9 +81,9 @@ export const photos = [
   // p('Product', 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80', 'Product shoot'),
   // p('Product', 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&q=80', 'Commercial product'),
   
-  // REAL STATE
-  // p('Real State', '/photos/realState/RS1.jpg', 'Real State'),
-  // p('Real State', '/photos/realState/RS2.jpg', 'Real State'),
+  // REAL ESTATE
+  // p('Real Estate', '/photos/realEstate/RS1.jpg', 'Real Estate'),
+  // p('Real Estate', '/photos/realEstate/RS2.jpg', 'Real Estate'),
   
   // WEDDING
   // p('Wedding', 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80', 'Wedding ceremony'),

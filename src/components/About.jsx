@@ -47,7 +47,7 @@ export default function About() {
 
             {/* Services list */}
             <div className="grid grid-cols-2 gap-3">
-              {['Maternity', 'Gender Reveal', 'Baby Shower', 'Newborn', 'Birthday', 'Family Events', 'Graduation', 'University Events', 'Music Events', 'Product', 'Wedding', 'Real State'].map(s => (
+              {['Maternity', 'Gender Reveal', 'Baby Shower', 'Newborn', 'Birthday', 'Family Events', 'Graduation', 'University Events', 'Music Events', 'Product', 'Wedding', 'Real Estate'].map(s => (
                 <div key={s} className="flex items-center gap-2">
                   <span style={{ width:'4px', height:'4px', borderRadius:'50%', background:'var(--accent)', flexShrink:0 }} />
                   <span style={{ fontFamily:'Jost', fontSize:'0.8rem', letterSpacing:'0.08em', color:'var(--text2)' }}>{s}</span>

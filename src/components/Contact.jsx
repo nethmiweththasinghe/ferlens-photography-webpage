@@ -57,7 +57,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      style={{ background: "var(--bg)", padding: "6rem 0" }}
+      style={{ background: "var(--bg)", padding: "4rem 0" }}
     >
       <div ref={ref} className="fade-in max-w-2xl mx-auto px-8 text-center">
         <p
@@ -126,7 +126,7 @@ export default function Contact() {
         </div>
 
         {/* Social icons row */}
-        <div className="flex items-center justify-center gap-8 mb-12">
+        <div className="flex items-center justify-center gap-8 mb-1">
           {socials.map((s) => (
             <a
               key={s.label}
