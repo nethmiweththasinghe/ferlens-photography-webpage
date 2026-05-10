@@ -57,7 +57,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      style={{ background: "var(--bg)", padding: "4rem 0" }}
+      style={{ background: "var(--bg2)", padding: "4rem 0" }}
     >
       <div ref={ref} className="fade-in max-w-2xl mx-auto px-8 text-center">
         <p
