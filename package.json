@@ -7,11 +7,18 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "react-snap"
   },
   "dependencies": {
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "minifyHtml": false,
+    "headless": true,
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -24,6 +31,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.5.0",
     "postcss": "^8.5.14",
+    "react-snap": "^1.23.0",
     "tailwindcss": "^3.4.19",
     "vite": "^8.0.10"
   }
