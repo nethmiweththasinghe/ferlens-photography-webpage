@@ -102,12 +102,11 @@ export const photos = [
 ];
 
 export const heroImages = [
-  { src: '/photos/slides/slide1.jpeg',  alt: 'Slide 1',  category: 'Event Photography' },
-  { src: '/photos/slides/slide2.jpeg',  alt: 'Slide 2',  category: 'Graduation Photography' },
-  { src: '/photos/slides/slide4.jpeg',  alt: 'Slide 4',  category: 'Real Estate' },
-  { src: '/photos/slides/slide7.jpeg',  alt: 'Slide 7',  category: 'Birthday Photography' },
-  { src: '/photos/slides/slide5.jpeg',  alt: 'Slide 5',  category: 'Graduation Photography' },
-  { src: '/photos/slides/slide8.jpeg',  alt: 'Slide 8',  category: 'Wedding Photography' },
-  { src: '/photos/slides/slide9.jpeg',  alt: 'Slide 9',  category: 'Product Photography' },
-  { src: '/photos/slides/slide10.jpeg', alt: 'Slide 10', category: 'Birthday Photography' },
+  { desktop: '/photos/slides/slide1.jpeg', mobile: '/photos/slides/slide1.jpeg', alt: 'Event',  category: 'Event Photography' },
+  { desktop: '/photos/slides/slide2.jpeg', mobile: '/photos/slides/slide5.jpeg', alt: 'Graduation',  category: 'Graduation Photography' },
+  { desktop: '/photos/slides/slide4.jpeg', mobile: '/photos/slides/slide4.jpeg', alt: 'RealEstate',  category: 'Real Estate' },
+  { desktop: '/photos/slides/slide7.jpeg', mobile: '/photos/slides/slide10.jpeg', alt: 'Birthday',  category: 'Birthday Photography' },
+  { desktop: '/photos/slides/slide8.jpeg', mobile: '/photos/slides/slide8.jpeg', alt: 'Wedding',  category: 'Wedding Photography' },
+  { desktop: '/photos/slides/slide9.jpeg', mobile: '/photos/slides/slide9.jpeg', alt: 'Product',  category: 'Product Photography' },
+  // { desktop: '/photos/slides/slide10.jpeg', mobile: '/photos/slides/slide10.jpeg', alt: 'Slide 10', category: 'Birthday Photography' },
 ];

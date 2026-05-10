@@ -20,11 +20,17 @@ export default function Home() {
           className="absolute inset-0 transition-opacity duration-1000"
           style={{ opacity: i === current ? 1 : 0 }}
         >
-          <img
-            src={img.src}
-            alt={img.alt}
-            className="w-full h-full object-cover"
-          />
+          <picture>
+            {/* Mobile Image */}
+            <source media="(max-width: 767px)" srcSet={img.mobile} />
+
+            {/* Desktop Image */}
+            <img
+              src={img.desktop}
+              alt={img.alt}
+              className="w-full h-full object-cover"
+            />
+          </picture>
         </div>
       ))}
 
@@ -120,8 +126,14 @@ export default function Home() {
 
       <style>{`
         @keyframes fadeSlideUp {
-          from { opacity: 0; transform: translateY(12px); }
-          to   { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(12px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       `}</style>
     </section>
