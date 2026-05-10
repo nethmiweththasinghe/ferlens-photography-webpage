@@ -31,7 +31,7 @@ export default function Navbar({ theme, onToggle }) {
 
   const logoHeight =
     width < 640
-      ? "30px" // mobile
+      ? "40px" // mobile
       : width < 1024
         ? "50px" // tablet
         : "60px"; // desktop
