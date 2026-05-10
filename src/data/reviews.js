@@ -22,13 +22,13 @@ The photographer was very patient with requests and suggested alternative shots 
   },
   {
     name: "Sewmini Gunawardhana",
-    occasion: "Graduation Photoshoot",
+    occasion: "Graduation Ceremony",
     text: "Absolutely loved my graduation photos! Amazing work, great attention to detail and such a comfortable experience. Highly recommend his work!",
     image: "/photos/reviews/sewmini.jpeg",
   },
   {
     name: "Thilanka Rathnayake",
-    occasion: "Family Session",
+    occasion: "Graduation Ceremony",
     text: `I had such a great experience with Pasindu. From the start, they were really easy to talk to and made everything feel relaxed and natural.
 The photos turned out even better than I expected. He captured moments so naturally, and you can tell they really pay attention to the little details. Nothing felt forced or overly edited, just genuine, beautiful shots.
 I also got the photos back pretty quickly, which was a nice bonus. Overall, I’m really happy with how everything turned out and would definitely recommend them to anyone looking for a photographer. ♥️`,
@@ -36,7 +36,7 @@ I also got the photos back pretty quickly, which was a nice bonus. Overall, I’
   },
   {
     name: "Ramod Kushan",
-    occasion: "Family Session",
+    occasion: "Graduation Ceremony",
     text: "I’m really happy with my graduation photos! Pasindu captured everything so perfectly and made the whole experience comfortable and enjoyable. The photos look amazing and feel so natural. I would definitely recommend Fern Lens Photography to anyone looking for quality work!",
     image: "/photos/reviews/Ramod.jpeg",
   },
