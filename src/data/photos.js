@@ -105,9 +105,9 @@ export const photos = [
 export const heroImages = [
   { desktop: '/photos/slides/slide1.jpg', mobile: '/photos/slides/slide1.jpg', alt: 'Event',  category: 'Event Photography' },
   { desktop: '/photos/slides/slide2.jpg', mobile: '/photos/slides/slide5.jpeg', alt: 'Graduation',  category: 'Graduation Photography' },
-  { desktop: '/photos/slides/slide4.jpg', mobile: '/photos/slides/slide4.jpg', alt: 'RealEstate',  category: 'Real Estate' },
-  { desktop: '/photos/slides/slide7.jpeg', mobile: '/photos/slides/slide10.jpg', alt: 'Birthday',  category: 'Birthday Photography' },
   { desktop: '/photos/slides/slide8.jpg', mobile: '/photos/slides/slide8.jpg', alt: 'Wedding',  category: 'Wedding Photography' },
+  { desktop: '/photos/slides/slide4.jpg', mobile: '/photos/slides/slide4.jpg', alt: 'RealEstate',  category: 'Real Estate' },
+  { desktop: '/photos/slides/slide10.jpg', mobile: '/photos/slides/slide11.jpg', alt: 'Birthday',  category: 'Birthday Photography' },
   { desktop: '/photos/slides/slide9.jpg', mobile: '/photos/slides/slide9.jpg', alt: 'Product',  category: 'Product Photography' },
   // { desktop: '/photos/slides/slide10.jpeg', mobile: '/photos/slides/slide10.jpeg', alt: 'Slide 10', category: 'Birthday Photography' },
 ];
