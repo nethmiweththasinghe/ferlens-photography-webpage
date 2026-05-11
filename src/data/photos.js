@@ -41,30 +41,31 @@ export const photos = [
 
   
   // BIRTHDAY
-  // p('Birthday', '/photos/birthday/B1.jpg',  'Birthday shoot'),
   p('Birthday', '/photos/birthday/B2.jpg',  'Birthday shoot'),
   p('Birthday', '/photos/birthday/B3.jpg',  'Birthday shoot'),
   p('Birthday', '/photos/birthday/B4.jpg',  'Birthday shoot'),
   p('Birthday', '/photos/birthday/B5.jpg',  'Birthday shoot'),
-  p('Birthday', '/photos/birthday/B11.jpeg',  'Birthday shoot'),
-  p('Birthday', '/photos/birthday/B9.jpeg', 'Birthday celebration'),
+  // p('Birthday', '/photos/birthday/B11.jpg',  'Birthday shoot'),
+  p('Birthday', '/photos/birthday/B9.jpg', 'Birthday celebration'),
   p('Birthday', '/photos/birthday/B6.jpg',  'Birthday shoot'),
   p('Birthday', '/photos/birthday/B10.jpg',  'Birthday celebration'),
   p('Birthday', '/photos/birthday/B8.jpg',  'Birthday celebration'),
-  // p('Birthday', '/photos/birthday/B7.jpg',  'Birthday celebration'),
   
   // FAMILY
-  p('Family', '/photos/family/F3.jpg', 'Family portrait'),
+  p('Family', '/photos/family/F4.jpg', 'Family events'),
   p('Family', '/photos/family/F1.jpg', 'Family outdoor session'),
   p('Family', '/photos/family/F2.jpg', 'Family events'),
+  p('Family', '/photos/family/F3.jpg', 'Family portrait'),
   
   // GRADUATION
   p('Graduation', '/photos/graduation/Grad1.jpg', 'Graduation cap toss'),
+  p('Graduation', '/photos/graduation/Grad8.jpg', 'Graduation cap toss'),
   p('Graduation', '/photos/graduation/Grad4.jpg', 'Graduation ceremony'),
   p('Graduation', '/photos/graduation/Grad2.jpg', 'Graduate portrait'),
   p('Graduation', '/photos/graduation/Grad3.jpg', 'Graduation portrait'),
   p('Graduation', '/photos/graduation/Grad5.jpg', 'Graduation portrait'),
   p('Graduation', '/photos/graduation/Grad6.jpg', 'Graduation cap toss'),
+  p('Graduation', '/photos/graduation/Grad7.jpg', 'Graduation portrait'),
   
   // UNIVERSITY EVENTS
   // p('University Events', 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80', 'University event'),
@@ -82,7 +83,7 @@ export const photos = [
   // p('Product', 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&q=80', 'Commercial product'),
   
   // REAL ESTATE
-  // p('Real Estate', '/photos/realEstate/RS1.jpg', 'Real Estate'),
+  p('Real Estate', '/photos/realEstate/R1.jpg', 'Real Estate'),
   // p('Real Estate', '/photos/realEstate/RS2.jpg', 'Real Estate'),
   
   // WEDDING
@@ -102,11 +103,11 @@ export const photos = [
 ];
 
 export const heroImages = [
-  { desktop: '/photos/slides/slide1.jpeg', mobile: '/photos/slides/slide1.jpeg', alt: 'Event',  category: 'Event Photography' },
-  { desktop: '/photos/slides/slide2.jpeg', mobile: '/photos/slides/slide5.jpeg', alt: 'Graduation',  category: 'Graduation Photography' },
-  { desktop: '/photos/slides/slide4.jpeg', mobile: '/photos/slides/slide4.jpeg', alt: 'RealEstate',  category: 'Real Estate' },
-  { desktop: '/photos/slides/slide7.jpeg', mobile: '/photos/slides/slide10.jpeg', alt: 'Birthday',  category: 'Birthday Photography' },
-  { desktop: '/photos/slides/slide8.jpeg', mobile: '/photos/slides/slide8.jpeg', alt: 'Wedding',  category: 'Wedding Photography' },
-  { desktop: '/photos/slides/slide9.jpeg', mobile: '/photos/slides/slide9.jpeg', alt: 'Product',  category: 'Product Photography' },
+  { desktop: '/photos/slides/slide1.jpg', mobile: '/photos/slides/slide1.jpg', alt: 'Event',  category: 'Event Photography' },
+  { desktop: '/photos/slides/slide2.jpg', mobile: '/photos/slides/slide5.jpeg', alt: 'Graduation',  category: 'Graduation Photography' },
+  { desktop: '/photos/slides/slide4.jpg', mobile: '/photos/slides/slide4.jpg', alt: 'RealEstate',  category: 'Real Estate' },
+  { desktop: '/photos/slides/slide7.jpeg', mobile: '/photos/slides/slide10.jpg', alt: 'Birthday',  category: 'Birthday Photography' },
+  { desktop: '/photos/slides/slide8.jpg', mobile: '/photos/slides/slide8.jpg', alt: 'Wedding',  category: 'Wedding Photography' },
+  { desktop: '/photos/slides/slide9.jpg', mobile: '/photos/slides/slide9.jpg', alt: 'Product',  category: 'Product Photography' },
   // { desktop: '/photos/slides/slide10.jpeg', mobile: '/photos/slides/slide10.jpeg', alt: 'Slide 10', category: 'Birthday Photography' },
 ];
