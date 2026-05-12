@@ -12,10 +12,10 @@ export const categories = [
   'University Events',
   'Music Events',
   'Product',
+  'Portrait',
   'Real Estate',
   'Wedding',
   'Newborn',
-  'Portrait',
 ];
 
 export const photos = [
@@ -44,8 +44,8 @@ export const photos = [
   p('Birthday', '/photos/birthday/B2.jpg',  'Birthday shoot'),
   p('Birthday', '/photos/birthday/B3.jpg',  'Birthday shoot'),
   p('Birthday', '/photos/birthday/B4.jpg',  'Birthday shoot'),
+  p('Birthday', '/photos/birthday/B11.jpg',  'Birthday shoot'),
   p('Birthday', '/photos/birthday/B5.jpg',  'Birthday shoot'),
-  // p('Birthday', '/photos/birthday/B11.jpg',  'Birthday shoot'),
   p('Birthday', '/photos/birthday/B9.jpg', 'Birthday celebration'),
   p('Birthday', '/photos/birthday/B6.jpg',  'Birthday shoot'),
   p('Birthday', '/photos/birthday/B10.jpg',  'Birthday celebration'),
@@ -68,23 +68,45 @@ export const photos = [
   p('Graduation', '/photos/graduation/Grad7.jpg', 'Graduation portrait'),
   
   // UNIVERSITY EVENTS
-  // p('University Events', 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80', 'University event'),
-  // p('University Events', 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', 'Campus event coverage'),
-  // p('University Events', 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80', 'University conference'),
+  p('University Events', '/photos/uniEvents/U1.jpeg', 'STEIN - UOA'),
+  p('University Events', '/photos/uniEvents/U3.jpeg', 'STEIN - UOA'),
+  p('University Events', '/photos/uniEvents/U4.jpeg', 'STEIN - UOA'),
+  p('University Events', '/photos/uniEvents/U2.jpeg', 'STEIN - UOA'),
+  p('University Events', '/photos/uniEvents/U5.jpeg', 'STEIN - UOA'),
+  p('University Events', '/photos/uniEvents/U6.jpeg', 'STEIN - UOA'),
+  p('University Events', '/photos/uniEvents/U7.jpeg', 'STEIN - UOA'),
+  p('University Events', '/photos/uniEvents/U8.jpeg', 'STEIN - UOA'),
   
   // MUSIC EVENTS
-  // p('Music Events', 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80', 'Live concert'),
-  // p('Music Events', 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80', 'Music festival'),
-  // p('Music Events', 'https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=800&q=80', 'Stage performance'),
+  p('Music Events', '/photos/musicEvents/M1.jpeg', 'Clubbing event'),
+  p('Music Events', '/photos/musicEvents/M6.jpeg', 'Clubbing event'),
+  p('Music Events', '/photos/musicEvents/M7.jpeg', 'Clubbing event'),
+  p('Music Events', '/photos/musicEvents/M3.jpeg', 'Clubbing event'),
+  p('Music Events', '/photos/musicEvents/M2.jpeg', 'Clubbing event'),
+  p('Music Events', '/photos/musicEvents/M5.jpeg', 'Clubbing event'),
+  p('Music Events', '/photos/musicEvents/M8.jpeg', 'Clubbing event'),
+  p('Music Events', '/photos/musicEvents/M4.jpeg', 'Clubbing event'),
+  // p('Music Events', '/photos/musicEvents/M9.jpeg', 'Stage performance'),
   
   // PRODUCT
-  // p('Product', 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80', 'Product photography'),
-  // p('Product', 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80', 'Product shoot'),
-  // p('Product', 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&q=80', 'Commercial product'),
+  p('Product', '/photos/product/p1.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p2.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p3.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p4.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p5.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p6.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p7.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p8.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p9.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p10.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p11.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p12.jpeg', 'Product shoot'),
+  p('Product', '/photos/product/p13.jpeg', 'Product shoot'),
   
   // REAL ESTATE
   p('Real Estate', '/photos/realEstate/R1.jpg', 'Real Estate'),
-  // p('Real Estate', '/photos/realEstate/RS2.jpg', 'Real Estate'),
+  p('Real Estate', '/photos/realEstate/R2.jpeg', 'Real Estate'),
+  p('Real Estate', '/photos/realEstate/R3.jpeg', 'Real Estate'),
   
   // WEDDING
   // p('Wedding', 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80', 'Wedding ceremony'),
@@ -97,9 +119,12 @@ export const photos = [
   // p('Newborn', 'https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=800&q=80', 'Newborn close up'),
   
   // PORTRAIT
-  // p('Portrait', 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80', 'Portrait session'),
-  // p('Portrait', 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&q=80', 'Lifestyle portrait'),
-  // p('Portrait', 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80', 'Studio portrait'),
+  p('Portrait', '/photos/portrait/P3.jpeg', 'Portrait session'),
+  p('Portrait', '/photos/portrait/P1.jpeg', 'Portrait session'),
+  p('Portrait', '/photos/portrait/P2.jpeg', 'Portrait session'),
+  p('Portrait', '/photos/portrait/P4.jpeg', 'Portrait session'),
+  p('Portrait', '/photos/portrait/P5.jpeg', 'Portrait session'),
+  p('Portrait', '/photos/portrait/P6.jpeg', 'Portrait session'),
 ];
 
 export const heroImages = [
@@ -109,5 +134,5 @@ export const heroImages = [
   { desktop: '/photos/slides/slide4.jpg', mobile: '/photos/slides/slide4.jpg', alt: 'RealEstate',  category: 'Real Estate' },
   { desktop: '/photos/slides/slide10.jpg', mobile: '/photos/slides/slide11.jpg', alt: 'Birthday',  category: 'Birthday Photography' },
   { desktop: '/photos/slides/slide9.jpg', mobile: '/photos/slides/slide9.jpg', alt: 'Product',  category: 'Product Photography' },
-  // { desktop: '/photos/slides/slide10.jpeg', mobile: '/photos/slides/slide10.jpeg', alt: 'Slide 10', category: 'Birthday Photography' },
+  { desktop: '/photos/slides/slide6.jpeg', mobile: '/photos/slides/slide3.jpeg', alt: 'Portrait', category: 'Portrait Photography' },
 ];
