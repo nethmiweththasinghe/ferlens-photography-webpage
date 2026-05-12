@@ -106,7 +106,7 @@ export default function KindWords() {
               }}
             >
               <div
-                className="grid grid-cols-1 md:grid-cols-[320px_1fr] gap-12 items-center"
+                className="grid grid-cols-1 md:grid-cols-[320px_1fr] gap-12 items-center justify-items-center md:justify-items-start"
                 style={{
                   minHeight: "320px",
                   alignItems: "center",
@@ -115,10 +115,12 @@ export default function KindWords() {
                 {/* LEFT — IMAGE */}
                 <div
                   style={{
-                    width: "100%",
-                    height: "320px",
+                    width: "clamp(220px, 70vw, 320px)",
+                    height: "clamp(220px, 70vw, 320px)",
                     overflow: "hidden",
                     borderRadius: "50%",
+                    flexShrink: 0,
+                    margin: "0 auto",
                   }}
                 >
                   <img
@@ -128,7 +130,7 @@ export default function KindWords() {
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
-                      //   borderRadius: 50%
+                      borderRadius: "50%",
                     }}
                   />
                 </div>
