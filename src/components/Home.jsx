@@ -93,7 +93,7 @@ export default function Home() {
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.background = "var(--accent)";
-            e.currentTarget.style.color = "#0a0908";
+            e.currentTarget.style.color = "#ffffff";
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = "transparent";

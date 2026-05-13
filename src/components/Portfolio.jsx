@@ -260,7 +260,7 @@ export default function Portfolio() {
             <button
               onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
               style={{ background:"transparent", border:"1px solid var(--accent)", color:"var(--accent)", fontFamily:"Jost", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", padding:"14px 40px", cursor:"pointer", transition:"all 0.3s" }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "var(--bg)"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "#ffffff"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}
             >
               Load More
