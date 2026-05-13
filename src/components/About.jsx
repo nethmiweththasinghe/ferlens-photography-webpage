@@ -1,5 +1,14 @@
 import { useEffect, useRef } from 'react';
-import aboutPhoto from "/photos/family/F3.jpg";
+import aboutPhoto from "/photos/About.jpeg";
+
+const services = [
+  'Maternity', 'Gender Reveal',
+  'Baby Shower', 'Newborn',
+  'Birthday', 'Family Events',
+  'Graduation', 'University Events',
+  'Music Events', 'Product',
+  'Wedding', 'Real Estate',
+];
 
 export default function About() {
   const ref = useRef(null);
@@ -15,46 +24,51 @@ export default function About() {
 
   return (
     <section id="about" style={{ background: 'var(--bg2)', padding: '6rem 0' }}>
-      <div ref={ref} className="fade-in max-w-5xl mx-auto px-8 md:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div ref={ref} className="fade-in" style={{ maxWidth: '900px', margin: '0 auto', padding: '0 3rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '5rem', alignItems: 'start' }}>
 
-          {/* Left — image placeholder */}
-          <div className="relative">
-            <div style={{ width:'100%', aspectRatio:'3/4', background:'var(--surface)', border:'1px solid var(--subtle)', display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column', gap:'0.75rem' }}>
-              <img src={aboutPhoto} alt="About" className="w-full h-full object-cover" />
+          {/* Left — photo */}
+          <div style={{ position: 'relative', paddingTop: '1rem' }}>
+            <div style={{ width: '100%', maxWidth: '280px', aspectRatio: '3/4', overflow: 'hidden' }}>
+              <img src={aboutPhoto} alt="Pasindu Fernando" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             </div>
-            {/* Gold accent line */}
-            <div style={{ position:'absolute', bottom:'-1rem', left:'-1rem', width:'60%', height:'1px', background:'var(--accent)' }} />
-            <div style={{ position:'absolute', top:'-1rem', right:'-1rem', width:'1px', height:'60%', background:'var(--accent)' }} />
+            <div style={{ marginTop: '1.25rem' }}>
+              <p style={{ fontFamily: 'Jost', fontWeight: 300, fontSize: '0.78rem', color: 'var(--muted)', letterSpacing: '0.04em', lineHeight: 1.7 }}>Pasindu Fernando,</p>
+              <p style={{ fontFamily: 'Jost', fontWeight: 300, fontSize: '0.78rem', color: 'var(--muted)', letterSpacing: '0.04em', lineHeight: 1.7 }}>Professional Photographer</p>
+            </div>
+            {/* Accent lines */}
+            <div style={{ width: '60%', height: '1px', background: 'var(--accent)', marginTop: '1.75rem' }} />
+            <div style={{ position: 'absolute', top: '-1.5rem', right: '-1.5rem', width: '1px', height: '55%', background: 'var(--accent)' }} />
           </div>
 
           {/* Right — text */}
-          <div>
-            <p style={{ fontFamily:'Jost', fontSize:'0.7rem', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--accent)', marginBottom:'1.5rem' }}>
+          <div style={{ paddingTop: '0.5rem' }}>
+            <p style={{ fontFamily: 'Jost', fontSize: '0.65rem', letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '1.75rem' }}>
               About
             </p>
-            <h2 style={{ fontFamily:'"Cormorant Garamond", serif', fontSize:'clamp(2rem, 4vw, 3rem)', fontWeight:300, color:'var(--text)', letterSpacing:'0.04em', lineHeight:1.1, marginBottom:'2rem' }}>
+            <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 300, color: 'var(--text)', lineHeight: 1.12, letterSpacing: '0.02em', marginBottom: '1.5rem' }}>
               Capturing moments<br />
-              <em style={{ fontStyle:'italic' }}>that last forever</em>
+              <em>that last forever</em>
             </h2>
-            <div style={{ width:'40px', height:'1px', background:'var(--accent)', marginBottom:'1rem' }} />
-            <p style={{ color:'var(--text2)', fontFamily:'Jost', fontWeight:300, lineHeight:1.9, fontSize:'0.95rem', marginBottom:'1.5rem' }}>
+            <div style={{ width: '36px', height: '1px', background: 'var(--accent)', marginBottom: '1.5rem' }} />
+            <p style={{ fontFamily: 'Jost', fontWeight: 300, fontSize: '0.9rem', color: 'var(--text2)', lineHeight: 1.95, marginBottom: '1rem' }}>
               Fernlens Photography specialises in creating timeless images that tell your unique story. From the intimate moments of a newborn session to the grandeur of a wedding day, every shoot is approached with the same passion and attention to detail.
             </p>
-            <p style={{ color:'var(--muted)', fontFamily:'Jost', fontWeight:300, lineHeight:1.9, fontSize:'0.9rem', marginBottom:'2.5rem' }}>
-              Based in New Zealand, available  for any type of shoots and events.
+            <p style={{ fontFamily: 'Jost', fontWeight: 300, fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.9, marginBottom: '2.5rem' }}>
+              Based in New Zealand, available for any type of shoots and events.
             </p>
 
-            {/* Services list */}
-            <div className="grid grid-cols-2 gap-3">
-              {['Maternity', 'Gender Reveal', 'Baby Shower', 'Newborn', 'Birthday', 'Family Events', 'Graduation', 'University Events', 'Music Events', 'Product', 'Wedding', 'Real Estate'].map(s => (
-                <div key={s} className="flex items-center gap-2">
-                  <span style={{ width:'4px', height:'4px', borderRadius:'50%', background:'var(--accent)', flexShrink:0 }} />
-                  <span style={{ fontFamily:'Jost', fontSize:'0.8rem', letterSpacing:'0.08em', color:'var(--text2)' }}>{s}</span>
+            {/* Services */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.55rem 1.5rem' }}>
+              {services.map(s => (
+                <div key={s} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  <span style={{ width: '3px', height: '3px', borderRadius: '50%', background: 'var(--accent)', flexShrink: 0 }} />
+                  <span style={{ fontFamily: 'Jost', fontSize: '0.78rem', letterSpacing: '0.06em', color: 'var(--text2)' }}>{s}</span>
                 </div>
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>
