@@ -3,6 +3,79 @@ import { photos, categories } from "../data/photos";
 
 const PAGE_SIZE = 6;
 
+// Spinner component
+function Spinner() {
+  return (
+    <div style={{
+      position: "absolute", inset: 0,
+      display: "flex", alignItems: "center", justifyContent: "center",
+      background: "var(--surface)",
+    }}>
+      <div style={{
+        width: "24px", height: "24px",
+        border: "1.5px solid var(--subtle)",
+        borderTopColor: "var(--accent)",
+        borderRadius: "50%",
+        animation: "spin 0.8s linear infinite",
+      }} />
+    </div>
+  );
+}
+
+function PhotoCard({ photo, onClick }) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div
+      className="photo-item break-inside-avoid mb-4 cursor-pointer"
+      onClick={onClick}
+      style={{ position: "relative", background: "var(--surface)" }}
+    >
+      {!loaded && (
+        <div style={{
+          position: "absolute", inset: 0,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          minHeight: "200px",
+        }}>
+          <div style={{
+            width: "22px", height: "22px",
+            border: "1.5px solid var(--subtle)",
+            borderTopColor: "var(--accent)",
+            borderRadius: "50%",
+            animation: "spin 0.8s linear infinite",
+          }} />
+        </div>
+      )}
+
+      <img
+        src={photo.src}
+        alt={photo.alt}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+        className="w-full block"
+        style={{
+          opacity: loaded ? 1 : 0,
+          transition: "opacity 0.4s ease",
+          minHeight: loaded ? 0 : "200px",
+        }}
+      />
+
+      {loaded && (
+        <div className="photo-overlay">
+          <div style={{ position: "absolute", bottom: "1rem", left: "1rem", right: "1rem", display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+            <p style={{ color: "rgba(245,240,232,0.9)", fontFamily: "Jost", fontSize: "0.65rem", letterSpacing: "0.15em", textTransform: "uppercase" }}>
+              {photo.category}
+            </p>
+            <p style={{ color: "rgba(245,240,232,0.55)", fontFamily: '"Cormorant Garamond", serif', fontSize: "0.85rem", fontStyle: "italic" }}>
+              {photo.alt}
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Lightbox({ photo, onClose, onPrev, onNext }) {
   useEffect(() => {
     const onKey = (e) => {
@@ -18,7 +91,7 @@ function Lightbox({ photo, onClose, onPrev, onNext }) {
     <div className="lightbox" onClick={onClose}>
       <button
         onClick={(e) => { e.stopPropagation(); onPrev(); }}
-        style={{ position:"absolute", left:"1.5rem", top:"50%", transform:"translateY(-50%)", background:"none", border:"none", color:"rgba(245,240,232,0.6)", fontSize:"3rem", cursor:"pointer", lineHeight:1, transition:"color 0.2s" }}
+        style={{ position: "absolute", left: "1.5rem", top: "50%", transform: "translateY(-50%)", background: "none", border: "none", color: "rgba(245,240,232,0.6)", fontSize: "3rem", cursor: "pointer", lineHeight: 1, transition: "color 0.2s" }}
         onMouseEnter={(e) => (e.currentTarget.style.color = "#f5f0e8")}
         onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,240,232,0.6)")}
       >‹</button>
@@ -27,24 +100,24 @@ function Lightbox({ photo, onClose, onPrev, onNext }) {
         src={photo.src.replace("w=800", "w=1400")}
         alt={photo.alt}
         onClick={(e) => e.stopPropagation()}
-        style={{ maxWidth:"90vw", maxHeight:"88vh", objectFit:"contain", boxShadow:"0 0 60px rgba(0,0,0,0.8)" }}
+        style={{ maxWidth: "90vw", maxHeight: "88vh", objectFit: "contain", boxShadow: "0 0 60px rgba(0,0,0,0.8)" }}
       />
 
       <button
         onClick={(e) => { e.stopPropagation(); onNext(); }}
-        style={{ position:"absolute", right:"1.5rem", top:"50%", transform:"translateY(-50%)", background:"none", border:"none", color:"rgba(245,240,232,0.6)", fontSize:"3rem", cursor:"pointer", lineHeight:1, transition:"color 0.2s" }}
+        style={{ position: "absolute", right: "1.5rem", top: "50%", transform: "translateY(-50%)", background: "none", border: "none", color: "rgba(245,240,232,0.6)", fontSize: "3rem", cursor: "pointer", lineHeight: 1, transition: "color 0.2s" }}
         onMouseEnter={(e) => (e.currentTarget.style.color = "#f5f0e8")}
         onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,240,232,0.6)")}
       >›</button>
 
       <button
         onClick={onClose}
-        style={{ position:"absolute", top:"1.5rem", right:"1.5rem", background:"none", border:"none", color:"rgba(245,240,232,0.6)", fontSize:"1.5rem", cursor:"pointer", transition:"color 0.2s" }}
+        style={{ position: "absolute", top: "1.5rem", right: "1.5rem", background: "none", border: "none", color: "rgba(245,240,232,0.6)", fontSize: "1.5rem", cursor: "pointer", transition: "color 0.2s" }}
         onMouseEnter={(e) => (e.currentTarget.style.color = "#f5f0e8")}
         onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(245,240,232,0.6)")}
       >✕</button>
 
-      <p style={{ position:"absolute", bottom:"1.5rem", left:"50%", transform:"translateX(-50%)", color:"rgba(245,240,232,0.45)", fontFamily:"Jost", fontSize:"0.7rem", letterSpacing:"0.18em", textTransform:"uppercase", whiteSpace:"nowrap" }}>
+      <p style={{ position: "absolute", bottom: "1.5rem", left: "50%", transform: "translateX(-50%)", color: "rgba(245,240,232,0.45)", fontFamily: "Jost", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", whiteSpace: "nowrap" }}>
         {photo.alt} · {photo.category}
       </p>
     </div>
@@ -120,38 +193,37 @@ export default function Portfolio() {
   const prevPhoto     = () => setLightboxIndex((i) => (i - 1 + visible.length) % visible.length);
   const nextPhoto     = () => setLightboxIndex((i) => (i + 1) % visible.length);
 
-  const arrowBtn = (visible) => ({
+  const arrowBtn = (show) => ({
     flexShrink: 0,
     background: "none",
     border: "none",
     color: "var(--muted)",
-    cursor: visible ? "pointer" : "default",
+    cursor: show ? "pointer" : "default",
     fontSize: "1.4rem",
     lineHeight: 1,
     padding: "0 4px",
     transition: "color 0.2s, opacity 0.2s",
-    opacity: visible ? 1 : 0,
-    pointerEvents: visible ? "auto" : "none",
+    opacity: show ? 1 : 0,
+    pointerEvents: show ? "auto" : "none",
   });
 
   return (
-    <section id="portfolio" style={{ background:"var(--bg)", padding:"6rem 0" }}>
+    <section id="portfolio" style={{ background: "var(--bg)", padding: "6rem 0" }}>
       <div ref={ref} className="fade-in max-w-7xl mx-auto px-6 md:px-12">
 
         {/* Header */}
         <div className="text-center mb-14">
-          <p style={{ fontFamily:"Jost", fontSize:"0.7rem", letterSpacing:"0.28em", textTransform:"uppercase", color:"var(--accent)", marginBottom:"1rem" }}>
+          <p style={{ fontFamily: "Jost", fontSize: "0.7rem", letterSpacing: "0.28em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "1rem" }}>
             Selected Work
           </p>
-          <h2 style={{ fontFamily:'"Cormorant Garamond", serif', fontSize:"clamp(2.5rem, 5vw, 4rem)", fontWeight:300, color:"var(--text)", letterSpacing:"0.05em", marginBottom:"1.5rem" }}>
+          <h2 style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, color: "var(--text)", letterSpacing: "0.05em", marginBottom: "1.5rem" }}>
             Portfolio
           </h2>
           <div className="gold-line" />
         </div>
 
-        {/* Filter bar with arrows */}
+        {/* Filter bar */}
         <div className="flex items-center gap-2 mb-12">
-
           <button
             onClick={() => scrollFilter(-1)}
             style={arrowBtn(canScrollLeft)}
@@ -162,7 +234,7 @@ export default function Portfolio() {
           <div
             ref={filterRef}
             className="flex gap-3 pb-1 overflow-x-auto"
-            style={{ scrollbarWidth:"none", msOverflowStyle:"none", flex:1 }}
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none", flex: 1 }}
           >
             {categories.map((cat) => (
               <button
@@ -208,11 +280,10 @@ export default function Portfolio() {
             onMouseEnter={(e) => { if (canScrollRight) e.currentTarget.style.color = "var(--accent)"; }}
             onMouseLeave={(e) => { if (canScrollRight) e.currentTarget.style.color = "var(--muted)"; }}
           >›</button>
-
         </div>
 
         {/* Count */}
-        <p style={{ fontFamily:"Jost", fontSize:"0.7rem", letterSpacing:"0.12em", color:"var(--muted)", marginBottom:"2rem", textTransform:"uppercase" }}>
+        <p style={{ fontFamily: "Jost", fontSize: "0.7rem", letterSpacing: "0.12em", color: "var(--muted)", marginBottom: "2rem", textTransform: "uppercase" }}>
           Showing {visible.length} of {filtered.length}{" "}
           {filtered.length === 1 ? "image" : "images"}
           {activeCategory !== "All" ? ` · ${activeCategory}` : ""}
@@ -221,30 +292,18 @@ export default function Portfolio() {
         {/* Masonry grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
           {visible.map((photo) => (
-            <div
+            <PhotoCard
               key={photo.id}
-              className="photo-item break-inside-avoid mb-4 cursor-pointer"
+              photo={photo}
               onClick={() => openLightbox(photo)}
-            >
-              <img src={photo.src} alt={photo.alt} className="w-full block" loading="lazy" />
-              <div className="photo-overlay">
-                <div style={{ position:"absolute", bottom:"1rem", left:"1rem", right:"1rem", display:"flex", justifyContent:"space-between", alignItems:"flex-end" }}>
-                  <p style={{ color:"rgba(245,240,232,0.9)", fontFamily:"Jost", fontSize:"0.65rem", letterSpacing:"0.15em", textTransform:"uppercase" }}>
-                    {photo.category}
-                  </p>
-                  <p style={{ color:"rgba(245,240,232,0.55)", fontFamily:'"Cormorant Garamond", serif', fontSize:"0.85rem", fontStyle:"italic" }}>
-                    {photo.alt}
-                  </p>
-                </div>
-              </div>
-            </div>
+            />
           ))}
         </div>
 
         {/* Empty state */}
         {filtered.length === 0 && (
           <div className="text-center py-24">
-            <p style={{ fontFamily:'"Cormorant Garamond", serif', fontSize:"1.5rem", color:"var(--muted)", fontStyle:"italic" }}>
+            <p style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: "1.5rem", color: "var(--muted)", fontStyle: "italic" }}>
               No photos in this category yet.
             </p>
           </div>
@@ -253,13 +312,13 @@ export default function Portfolio() {
         {/* Load More */}
         {hasMore && (
           <div className="text-center mt-16">
-            <p style={{ fontFamily:"Jost", fontSize:"0.7rem", color:"var(--muted)", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:"1.5rem" }}>
+            <p style={{ fontFamily: "Jost", fontSize: "0.7rem", color: "var(--muted)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
               {remaining} more {remaining === 1 ? "image" : "images"} in{" "}
               {activeCategory === "All" ? "this collection" : activeCategory}
             </p>
             <button
               onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-              style={{ background:"transparent", border:"1px solid var(--accent)", color:"var(--accent)", fontFamily:"Jost", fontSize:"0.75rem", letterSpacing:"0.2em", textTransform:"uppercase", padding:"14px 40px", cursor:"pointer", transition:"all 0.3s" }}
+              style={{ background: "transparent", border: "1px solid var(--accent)", color: "var(--accent)", fontFamily: "Jost", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", padding: "14px 40px", cursor: "pointer", transition: "all 0.3s" }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "#ffffff"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "var(--accent)"; }}
             >
@@ -271,8 +330,8 @@ export default function Portfolio() {
         {/* All loaded */}
         {!hasMore && filtered.length > PAGE_SIZE && (
           <div className="text-center mt-16">
-            <div className="gold-line" style={{ margin:"0 auto 1rem" }} />
-            <p style={{ fontFamily:'"Cormorant Garamond", serif', fontSize:"1rem", color:"var(--muted)", fontStyle:"italic" }}>
+            <div className="gold-line" style={{ margin: "0 auto 1rem" }} />
+            <p style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: "1rem", color: "var(--muted)", fontStyle: "italic" }}>
               All {filtered.length} images loaded
             </p>
           </div>
@@ -288,6 +347,12 @@ export default function Portfolio() {
           onNext={nextPhoto}
         />
       )}
+
+      <style>{`
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
     </section>
   );
 }
