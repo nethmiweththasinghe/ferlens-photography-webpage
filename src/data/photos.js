@@ -61,6 +61,7 @@ export const photos = [
   p('Graduation', '/photos/graduation/Grad1.jpg', 'Graduation cap toss'),
   p('Graduation', '/photos/graduation/Grad8.jpg', 'Graduation cap toss'),
   p('Graduation', '/photos/graduation/Grad4.jpg', 'Graduation ceremony'),
+  p('Graduation', '/photos/graduation/Grad9.jpg', 'Graduation ceremony'),
   p('Graduation', '/photos/graduation/Grad2.jpg', 'Graduate portrait'),
   p('Graduation', '/photos/graduation/Grad3.jpg', 'Graduation portrait'),
   p('Graduation', '/photos/graduation/Grad5.jpg', 'Graduation portrait'),
@@ -121,6 +122,7 @@ export const photos = [
   // PORTRAIT
   p('Portrait', '/photos/portrait/P3.jpeg', 'Portrait session'),
   p('Portrait', '/photos/portrait/P1.jpeg', 'Portrait session'),
+  p('Portrait', '/photos/portrait/P8.jpeg', 'Headshot'),
   p('Portrait', '/photos/portrait/P2.jpeg', 'Portrait session'),
   p('Portrait', '/photos/portrait/P4.jpeg', 'Portrait session'),
   p('Portrait', '/photos/portrait/P5.jpeg', 'Portrait session'),
